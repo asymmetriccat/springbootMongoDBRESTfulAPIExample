@@ -42,7 +42,7 @@ public class PostController {
       return new ResponseEntity<List<Post>>(list,status);
    }
 
-   @PutMapping
+   @PostMapping("/posts")
    public void createPost(@RequestBody Post post){
       postService.createPost(post);
    }
