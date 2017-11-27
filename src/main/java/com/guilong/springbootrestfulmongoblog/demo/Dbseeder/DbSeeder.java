@@ -26,7 +26,7 @@ public class DbSeeder implements CommandLineRunner{
          Post post1=new Post(
                  "Spring boot question 1",
                    "In this post, we are going talk about how to use spring boot and mongoDB to build a RESTful api.",
-                  new User (new ObjectId(),"Jack", "Li", "jackli", "ilikejava", "8133857101", "guilongli@ymail.com"),
+                  new User (new ObjectId(),"Jack", "Li", "jackli", "ilikejava", "8133000000", "jack@ymail.com"),
                  Arrays.asList(
                          new Comment(new ObjectId(),"Great post!", new Date(2011, 12, 12 ), "Jerry"),
                          new Comment(new ObjectId(),"Thanks for the information!", new Date(), "Bill"),
