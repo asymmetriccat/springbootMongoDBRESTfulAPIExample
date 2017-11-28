@@ -12,7 +12,8 @@ public class User {
     private String password;
     private String phoneNumber;
     private String email;
-
+    
+    public User() {}
     public User(ObjectId _id, String firstName, String lastName, String userName, String password, String phoneNumber, String email) {
         this._id = _id;
         this.firstName = firstName;

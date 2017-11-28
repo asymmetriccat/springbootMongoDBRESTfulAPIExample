@@ -11,7 +11,8 @@ public class Comment {
     private String body;
     private Date date;
     private String author;
-
+   
+    public Comment() {}
     public Comment(ObjectId _id, String body, Date date, String author) {
         this._id = _id;
         this.body = body;

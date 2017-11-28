@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.net.URI;
 import java.util.List;
 
 @RestController
@@ -43,8 +45,11 @@ public class PostController {
    }
 
    @PostMapping("/posts")
-   public void createPost(@RequestBody Post post){
-      postService.createPost(post);
+   public ResponseEntity<Object> createPost(@RequestBody Post post){  
+     Post createdPost= postService.createPost(post);
+      URI location=ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(createdPost.getId()).toUri();
+      return ResponseEntity.created(location).build();
+      
    }
 
    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)

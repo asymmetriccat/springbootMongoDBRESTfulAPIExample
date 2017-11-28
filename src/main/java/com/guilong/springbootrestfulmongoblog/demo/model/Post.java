@@ -19,6 +19,7 @@ public class Post {
     @Indexed(direction = IndexDirection.ASCENDING)
     private Date date;
 
+    public Post() {}
     public Post( String title, String body, User author, List<Comment> comments, Date date) {
 
         this.title = title;
