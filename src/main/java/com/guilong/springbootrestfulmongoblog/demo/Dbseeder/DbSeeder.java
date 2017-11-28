@@ -47,7 +47,7 @@ public class DbSeeder implements CommandLineRunner{
                          new Comment(new ObjectId(),"good mongoDB tutorial!", new Date(2016, 5,5), "Clinton")
 
                  ),
-                 new Date(2010, 10,10)
+                 new Date()
 
          );
          Post post3=new Post(
@@ -60,7 +60,7 @@ public class DbSeeder implements CommandLineRunner{
                          new Comment(new ObjectId(),"Good explanation!", new Date(2016, 2,1), "Steve")
 
                  ),
-                 new Date(2000, 1,2)
+                 new Date()
 
          );
 
